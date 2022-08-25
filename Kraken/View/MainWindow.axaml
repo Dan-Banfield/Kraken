@@ -25,6 +25,7 @@
 
 			<Button
 				x:Name="selectDirectoryButton"
+				Click="selectDirectoryButton_Click"
 				DockPanel.Dock="Right"
 				Width="45"
 				Height="30"
@@ -57,16 +58,19 @@
 			Content="READY"
 			FontSize="20"/>
 		
-		<ProgressBar/>
+		<ProgressBar
+			x:Name="statusProgressBar"/>
 		
 		<Button
 			x:Name="startButton"
+			Click="startButton_Click"
 			Margin="0, 10, 0, 0"
 			Foreground="White"
 			Content="START"/>
 
 		<Button
 			x:Name="closeButton"
+			Click="closeButton_Click"
 			Foreground="White"
 			Content="CLOSE"/>
 		

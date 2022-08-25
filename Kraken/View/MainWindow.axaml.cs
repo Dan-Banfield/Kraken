@@ -79,7 +79,8 @@ namespace Kraken
         {
             SetStatus(STATUS.BUSY);
 
-            int progressBarStep = (await GetFileCount(directory) / 100);
+            int fileCount = await GetFileCount(directory);
+            statusProgressBar.Maximum = fileCount;
 
             HashSet<string> fileHashSet = new HashSet<string>();
             string tempFileHash = "";
@@ -97,7 +98,7 @@ namespace Kraken
                     fileHashSet.Add(tempFileHash);
                 }
 
-                statusProgressBar.Value += progressBarStep;
+                statusProgressBar.Value += 1;
             }
 
             SetStatus(STATUS.READY);

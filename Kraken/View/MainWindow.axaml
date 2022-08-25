@@ -59,7 +59,8 @@
 			FontSize="20"/>
 		
 		<ProgressBar
-			x:Name="statusProgressBar"/>
+			x:Name="statusProgressBar"
+			Maximum="100"/>
 		
 		<Button
 			x:Name="startButton"

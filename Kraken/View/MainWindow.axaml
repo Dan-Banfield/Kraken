@@ -5,5 +5,10 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Kraken.MainWindow"
         Title="Kraken">
-    Welcome to Avalonia!
+
+	<StackPanel
+		Margin="16"
+		Spacing="16">
+		
+	</StackPanel>
 </Window>

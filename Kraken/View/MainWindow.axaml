@@ -7,8 +7,33 @@
         Title="Kraken">
 
 	<StackPanel
-		Margin="16"
+		Margin="36"
 		Spacing="16">
+		
+		<Label
+			Content="Directory Properties"
+			FontSize="36"/>
+		
+		<Label
+			Content="Selected Directory"
+			FontSize="20"/>
+
+		<DockPanel
+			LastChildFill="True">
+
+			<Button
+				DockPanel.Dock="Right"
+				Width="45"
+				Height="30"
+				Foreground="White"
+				Content="..."/>
+			
+			<TextBox
+				Margin="0, 0, 20, 0"
+				UseFloatingWatermark="True"
+				Watermark="Selected directory will show here!"
+				IsReadOnly="True"/>
+		</DockPanel>
 		
 	</StackPanel>
 </Window>

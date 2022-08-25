@@ -3,7 +3,7 @@
 			 xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
              x:Class="Kraken.App">
 	<Application.Resources>
-		<themes:BundledTheme BaseTheme="Dark" PrimaryColor="Purple" SecondaryColor="Lime"/>
+		<themes:BundledTheme BaseTheme="Dark" PrimaryColor="Orange" SecondaryColor="Lime"/>
 	</Application.Resources>
 	<Application.Styles>
 		<StyleInclude Source="avares://Material.Avalonia/Material.Avalonia.Templates.xaml" />

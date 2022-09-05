@@ -1,14 +1,14 @@
-using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Interactivity;
-using Avalonia.Utilities;
 using System;
-using System.Collections.Generic;
+using Avalonia;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Threading.Tasks;
 using System.Xml.XPath;
+using Avalonia.Controls;
+using Avalonia.Utilities;
+using Avalonia.Interactivity;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace Kraken
 {
@@ -43,6 +43,11 @@ namespace Kraken
 
         #endregion
 
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
         #region Event Handlers
 
         public void selectDirectoryButton_Click(object sender, RoutedEventArgs e) =>
@@ -51,15 +56,10 @@ namespace Kraken
         public void startButton_Click(object sender, RoutedEventArgs e) =>
             DeleteDuplicateFiles(SelectedDirectory);
 
-        public void closeButton_Click(object sender, RoutedEventArgs e) => 
+        public void closeButton_Click(object sender, RoutedEventArgs e) =>
             Close();
 
         #endregion
-
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
 
         #region Methods
 
@@ -142,9 +142,9 @@ namespace Kraken
             switch (status)
             {
                 case STATUS.READY:
+                    statusProgressBar.Value = 0;
                     statusLabel.Content = "READY";
                     startButton.IsEnabled = true;
-                    statusProgressBar.Value = 0;
                     break;
                 case STATUS.BUSY:
                     statusLabel.Content = "BUSY";

@@ -77,6 +77,8 @@ namespace Kraken
 
         private async void DeleteDuplicateFiles(string directory)
         {
+            if (string.IsNullOrWhiteSpace(SelectedDirectory)) return;
+
             SetStatus(STATUS.BUSY);
 
             int fileCount = await GetFileCount(directory);
@@ -142,6 +144,7 @@ namespace Kraken
                 case STATUS.READY:
                     statusLabel.Content = "READY";
                     startButton.IsEnabled = true;
+                    statusProgressBar.Value = 0;
                     break;
                 case STATUS.BUSY:
                     statusLabel.Content = "BUSY";

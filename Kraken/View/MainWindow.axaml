@@ -6,7 +6,10 @@
 		Width="450"
 		Height="590"
         x:Class="Kraken.MainWindow"
-        Title="Kraken">
+        Title="Kraken"
+		WindowStartupLocation="CenterScreen"
+		CanResize="False"
+		Icon="/Icon.ico">
 
 	<StackPanel
 		Margin="36"
